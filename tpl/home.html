@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>主页</title>
+
+    <link rel="stylesheet" href="../public/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/bootstrap/css/bootstrap-theme.min.css">
+    <script src="../public/js/jquery.js"></script>
+    <script src="../public/bootstrap/js/bootstrap.min.js"></script>
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        .side {
+            background: #9acfea;
+            width: 12em;
+            position: absolute;
+            left: -12em;
+            top: 0;
+            padding: 20px 0;
+            height: 100%;
+            z-index: 5;
+            color: #fff;
+        }
+
+        .side .img-circle {
+            display: block;
+            width: 100px;
+            height: 100px;
+            background: #639;
+        }
+
+        .side h2 {
+            line-height: 40px;
+            height: 40px;
+        }
+
+        .side ul {
+            font-size: 20px;
+        }
+
+        .side .img-thumbnail {
+            width: 100px;
+            height: 100px;
+            display: block;
+            background: #639;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .main {
+            position: absolute;
+            left: 12em;
+            right: 0;
+            background: #9370db;
+            height: 100%;
+            width: auto;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .thumbnail {
+            padding: 15px;
+        }
+
+        .main-left .thumbnail .h2 {
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-left .thumbnail p:last-child {
+            text-indent: 2em;
+        }
+        .main-left .thumbnail a:hover{
+            text-decoration: none;
+        }
+
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #639;
+            height: 44px;
+        }
+
+        .header .btn {
+            background: #000;
+            color: #fff;
+            position: absolute;
+            left: 100%;
+            transform: translateX(-100%);
+            border: none;
+            padding: 0;
+        }
+
+        .header .btn span {
+            display: block;
+            height: 44px;
+            line-height: 44px;
+            margin: 0 10px;
+        }
+
+        @media (max-height: 500px) {
+            .side .img-thumbnail {
+                display: none;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .main {
+                padding-top: 84px;
+            }
+
+            .side {
+                left: 100%;
+            }
+
+            .main {
+                left: 0;
+            }
+        }
+    </style>
+    <script>
+        $(function () {
+            $('#getin').on('click', function () {
+                $('.side').eq(0).css({left: '100%'})
+                $('.side').eq(0).animate({
+                    left: '-=' + $('.side').eq(0).width()
+                }, 500, function () {
+                    $('#getin').hide();
+                    $('#getout').show();
+                });
+                $('.header .btn').eq(0).animate({left: '-=' + $('.side').eq(0).width()}, 500)
+            });
+            $('#getout').on('click', function () {
+                $('.header .btn').eq(0).animate({left: '100%'}, 500)
+                $('.side').eq(0).animate({
+                    left: '100%'
+                }, 500, function () {
+                    $('#getin').show();
+                    $('#getout').hide();
+                    $('.side').eq(0).css({left: '-12em'});
+                });
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="main row">
+    <div class="header visible-sm visible-xs">
+        <div class="btn">
+            <span id="getin">展开</span>
+            <span id="getout" style="display: none">收起</span>
+        </div>
+    </div>
+    <div class="side text-center">
+        <img src="" alt="" class="img-circle center-block">
+        <h2>CaoZhi</h2>
+        <ul class="list-unstyled">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+            <li>four</li>
+        </ul>
+        <img src="" alt="" class="img-thumbnail">
+    </div>
+    <div class="main-left col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <div class="thumbnail">
+            <a href="javascript:;" class="h2">标题</a><br>
+            <p>
+                <span>时间</span>
+                <span>分类</span>
+                <span>评论</span>
+                <span>标签</span>
+            </p>
+            <p>
+                摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要
+            </p>
+        </div>
+    </div>
+    <div class="main-right col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="thumbnail"></div>
+    </div>
+</div>
+</body>
+</html>
